@@ -1,0 +1,211 @@
+$bg_color: #FBF6F6;
+$font__color:#504949;
+@font-face {
+    font-family: Cormorant;
+    src: url("../fonts/Cormorant-Bold.ttf");
+    font-weight: 700;
+ 
+}
+@font-face {
+    font-family: Cormorant;
+    src: url("../fonts/Cormorant-Medium.ttf");
+    font-weight: 500;
+ 
+}
+@font-face {
+    font-family: Cormorant;
+    src: url("../fonts/Cormorant-Regular.ttf");
+    font-weight: 400;
+ 
+}
+@font-face {
+    font-family: Cormorant;
+    src: url("../fonts/Cormorant-SemiBold.ttf");
+    font-weight: 600;
+ 
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+a{
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+body{
+    font-family: Cormorant;
+    font-size: 18px;
+    color: $font__color;
+    font-weight: 400;
+}
+.container{
+    max-width: 1770px;
+    margin: 0 auto;
+    @media (max-width: 376px) {
+        max-width: unset;
+        padding: 0 37px;
+        
+    }
+    
+}
+.header{
+    padding: 20px 0;
+    @media (max-width: 376px){
+        padding: 50px 0;
+    }
+    &__burger{
+        display: none;
+        @media (max-width: 376px) {
+            display: block;
+            
+        }
+    }
+    &__menu{
+        display: flex;
+        gap: 40px;
+        @media (max-width: 376px) {
+        display: none;
+            
+        }
+    }
+    &__nav{
+        display: flex;
+        justify-content: flex-end;
+    }
+    &__link{
+        font-weight: 400;
+        &:hover{
+            font-weight: 700;
+        }
+
+    }
+}
+.main{
+    background-color: $bg_color;
+    padding: 77px 0 127px 0;
+    @media (max-width: 376px){
+        padding: 10px 0;
+    }
+    &__text{
+        margin-bottom: 20px;
+        &__bold{
+            font-weight: 700;
+            margin-left: 107px;
+            margin-bottom: 0;
+            @media (max-width: 376px){
+                margin-left: 0;
+                margin-bottom: 4px;
+            }
+            
+        }
+
+    }
+    &__title{
+        font-weight: 600;
+        font-size: 80px;
+        @media (max-width: 376px){
+            font-size: 40px;
+            margin-bottom: 10px;
+        }
+
+    }
+    &__box{
+        display: flex;
+        gap: 79px;
+    }
+    &__info{
+        display: flex;
+        gap: 40px;
+        margin-bottom: 38px;
+        @media (max-width: 376px){
+           flex-wrap: wrap;
+           gap: 0;
+           row-gap: 4px;
+           column-gap: 38px;;
+
+        }
+    }
+
+    &__dig{
+        font-size: 50px;
+    }
+    &__photo{
+        & img{
+            width: 100%;
+        }
+        @media (max-width: 376px){
+            display: none;
+        }
+        &_mobile{
+            display: none;
+            @media (max-width: 376px){
+                display: block;
+                width: 338px;
+                margin-bottom: 35px;
+            }
+
+        }
+
+    }
+    &__subtitle{
+        font-size: 40px;
+        font-weight: 700;
+        max-width: 517px;
+        margin-bottom: 17px;
+        @media (max-width: 376px){
+            font-size: 30px;
+            margin-bottom: 24px;
+        }
+    }
+    &__item{
+        max-width: 419px;
+        margin-bottom: 10px;
+        @media (max-width: 376px){
+            min-width: 249px;
+        }
+        &__first{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: "1";
+                font-size: 50px;
+                line-height: 1;
+            }
+        }
+        &__second{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: "2";
+                font-size: 50px;
+                line-height: 1;
+            }
+        }
+        &__third{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: "3";
+                font-size: 50px;
+                line-height: 1;
+            }
+        }
+        &__fourth{
+            display: flex;
+            align-items: flex-end;
+            gap: 23px;
+            &::before{
+                content: "4";
+                font-size: 50px;
+                line-height: 1;
+            }
+        }
+    }
+
+}
